@@ -8,7 +8,7 @@
 <name>Pedometer</name>
 
 <!--display icon for the app-->
-<icon src="icon.png" />
+<icon src="logo.png" />
 
 <description>
 A simple pedometer app.

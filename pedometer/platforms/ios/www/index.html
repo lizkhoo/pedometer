@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Pedometer App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+    <!-- external links to jquery-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>  
+    
+    <!-- external links to phonegap-->      
+	<script src="phonegap.js"></script>
+    
+    <!-- internal link to app.js-->
+	<script src="app.js"></script>
+    
+</head>
+
+<!-- Body: calls the startApp() function in app.js as soon as the device app loads -->
+<body onLoad="startApp()">
+
+	<!-- Page: home -->
+	<div id="home"
+		data-role="page"
+		data-theme="a"
+		data-title="View Source: Home">
+        
+        <!-- header -->
+		<div data-role="header"
+			data-position="fixed">
+			<h1>Pedometer</h1>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				class="ui-btn-right"
+				>Info</a>
+		</div>  
+        <!-- end header -->
+        
+        <!-- content -->
+	  	<div data-role="content">
+        
+        	<!-- button that calls the reset function in app.js to reset the counter -->       
+        	<button onClick="resetCounter()">Reset</button>	   
+            
+           	<!-- area where the pedometer data (# of steps) retrieved from app.js and displayed  -->                  
+        	<div id="pedometerData">Loading...</div>
+            
+		</div>
+        <!-- end content --> 
+        
+        <!-- footer -->
+        <div data-role="footer"
+			data-position="fixed"
+			data-id="vs_footer">
+			
+            <!-- navbar -->
+            <div data-role="navbar">
+				<ul>
+					<li><a href="#developer" 
+					data-role="button"
+					data-icon="arrow-r"
+					>Developer</a></li>
+				</ul>
+			</div>
+            <!-- navbar -->
+		
+        </div>
+        <!-- end footer -->             
+	</div>
+    <!--end page -->
+    
+    <!-- Page: Developer -->
+	<div id="developer"
+		data-role="page"
+        data-theme="a"
+		data-title="View Source: Developer">
+		
+        <!-- header -->
+        <div data-role="header"
+			data-position="fixed"
+			data-id="vs_header">
+			<h1>Developer</h1>
+			<a href="#home"
+				data-icon="home"
+				data-iconpos="notext"
+				>Home</a>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				>Info</a>
+		</div>
+        <!-- header -->
+        
+        <!-- content -->
+		<p>Accelerometer Readings:</p>
+        <div data-role="content">
+        		<div id="developerData">Loading...</div>
+        </div>
+        <!-- end content -->
+       
+		<!-- footer -->
+        <div data-role="footer"
+			data-position="fixed"
+			data-id="vs_footer">
+            
+            <!-- navbar -->
+            <div data-role="navbar">
+				<ul>
+					<li><a href="#" 
+					data-role="button"
+					data-icon="arrow-l"
+                    data-rel="back"
+					>back</a></li>
+				</ul>
+			</div>
+            <!-- navbar -->
+            
+		</div>
+        <!-- end footer -->
+	</div>
+    <!-- page -->
+
+
+	<!-- info window -->
+	<div data-role="page"
+		id="info"
+		data-theme="a"
+		>
+		<div data-role="header">
+			<h1>Info</h1>
+		</div>
+		<div data-role="content">
+			<p>A simple pedometer app brought to you by BioSpark Inovation www.biosparkinnovation.org</p>
+			<a href="#"
+				data-role="button"
+				data-inline="true"
+				data-rel="back"
+				data-theme="a"
+			>back</a>
+		</div>
+	</div>
+	<!--end info window -->
+	
+	
+</body>
+</html>
