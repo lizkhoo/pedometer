@@ -4,14 +4,26 @@
         "uninstalled": []
     },
     "config_munge": {
-        "framework": {
-            "CoreMotion.framework": {
-                "false": 1
-            }
-        },
-        "config.xml": {
-            "/*": {
-                "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>": 1
+        "files": {
+            "framework": {
+                "parents": {
+                    "CoreMotion.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },

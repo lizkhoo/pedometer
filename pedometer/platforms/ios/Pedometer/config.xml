@@ -19,6 +19,9 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <feature name="Accelerometer">
+        <param name="ios-package" value="CDVAccelerometer" />
+    </feature>
     <name>Pedometer</name>
     <icon src="logo.png" />
     <description>
@@ -27,7 +30,4 @@ A simple pedometer app.
     <author email="info@biosparkinnovation.org" href="https://www.biosparkinnovation.org">
 Biospark Innovation
 </author>
-    <feature name="Accelerometer">
-        <param name="ios-package" value="CDVAccelerometer" />
-    </feature>
 </widget>
