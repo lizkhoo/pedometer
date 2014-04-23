@@ -1,0 +1,233 @@
+<!DOCTYPE html>  
+<html>      
+    <head>      
+        <title>GGIT App</title>           
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />    
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>        
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> 
+
+        <script type="text/javascript">
+
+        // show app is loading
+            function showLoader() {
+                window.setTimeout(function(){
+                    $.mobile.loading('show');
+                }, 1);
+            };
+
+        // setInterval to change some pages?
+
+            $(document).on("page1", function(){
+                setInterval(nextPage, 1000);
+            };
+
+            function nextPage(){
+                    
+            };
+
+        </script>
+    </head>   
+    <body>              
+        <div data-role="page" id="page1">      
+            <div data-role="header">         
+                <h1>
+                    Welcome Screen
+                </h1>     
+            </div><!-- /header -->      
+
+            <!-- auto load next screen somehow --> 
+            
+            <div data-role="footer">              
+            </div> 
+        </div><!-- /page -->      
+        
+        <div data-role="page" id="page2">      
+            <div data-role="header">         
+                <h1>
+                    GGIT Connection
+                </h1>     
+            </div><!-- /header -->      
+            
+            <div data-role="content">
+                Box connection status here
+                <a id="changePageButton" data-role="button">Change Page!</a>
+            </div><!-- /content -->      
+            
+            <div data-role="footer">              
+            </div> 
+        </div><!-- /page -->    
+
+        <div data-role="page" id="page3">      
+            <div data-role="header">         
+                <h1>
+                   Select one
+                </h1>     
+            </div><!-- /header -->      
+            
+            <div data-role="content">
+                <a href="page4" data-role="button">SENDER</a>
+            </div>
+
+            <div data-role="content">
+                <a href="page4" data-role="button">RECIPIENT</a>
+            </div><!-- /content -->    
+            <!-- /content -->      
+            
+            <div data-role="footer">              
+            </div> 
+        </div><!-- /page -->    
+
+        <div data-role="page" id="page4">         
+            <div data-role="header">    
+               <h1>
+                  Set up your GGIT box
+                </h1>     
+            </div><!-- /header -->         
+            
+              <div data-role="main" class="ui-content">
+                <form method="post" action="demoform.asp">
+                  <div class="ui-field-contain">
+                    <label for="serial">Serial Number:</label>
+                    <input type="number" name="serial" id="serial">       
+                    <label for="sender">Sender Email:</label>
+                    <input type="email" name="sender" id="sender" placeholder="Your email">
+                    <label for="recipient">Recipient Email:</label>
+                    <input type="email" name="recipient" id="recipient" placeholder="Your friend's email">
+                  </div>
+                  <input type="submit" data-inline="true" value="Next">
+                </form>
+              </div>
+            </div><!-- /content -->         
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+       <div data-role="page" id="page5">      
+            <div data-role="header">         
+                <h1>
+                   Welcome!
+                </h1>     
+            </div><!-- /header -->      
+
+            <div data-role="content">
+                
+                Welcome! Set a fitness goal for "RECIPIENT", then put a gift for them in GGIT, lock it, and send it to them. GGIT will unlock when "RECIPIENT" reaches the fitness goal. 
+
+                <a href="page6" data-role="button">NEXT</a>
+            </div><!-- /content -->    
+            <!-- /content -->      
+            
+            <div data-role="footer">              
+            </div> 
+        </div><!-- /page -->
+
+      <div data-role="page" id="page6">         
+            <div data-role="header">    
+               <h1>
+                  Set GGIT Goal
+                </h1>     
+            </div><!-- /header -->         
+            
+              <div data-role="main" class="ui-content">
+                <form method="post" action="demoform.asp">
+                  <div class="ui-field-contain">
+
+                    Set a fitness goal for your friend
+
+                    <label for="steps">Steps:</label>
+                    <input type="number" name="steps" id="steps">       
+                    <label for="freq">Days per week:</label>
+                    <input type="number" name="freq" id="freq" min="1" max="7">
+                    
+                  </div>
+                  <input type="submit" data-inline="true" value="Next">
+                </form>
+              </div>
+            </div><!-- /content -->         
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+        <div data-role="page" id="page7">         
+            <div data-role="header">    
+               <h1>
+                  Fill the GGIT box
+                </h1>     
+            </div><!-- /header -->         
+            <div data-role="content">
+                
+                Now put something in GGIT for your friend to unlock! 
+
+                <a href="page8" data-role="button">NEXT</a>
+            </div><!-- /content -->    
+        
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+        <div data-role="page" id="page8">         
+            <div data-role="header">    
+               <h1>
+                  Set Up Complete
+                </h1>     
+            </div><!-- /header -->         
+            <div data-role="content">
+                
+                GGIT is locked! Now send the box to "RECIPIENT"! We have sent them an email telling them to expect to receive the box from you.
+
+                <a href="page9" data-role="button">LOCK</a>
+            </div><!-- /content -->    
+        
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+         <div data-role="page" id="page9">         
+            <div data-role="header">    
+               <h1>
+                  GGIT Status
+                </h1>     
+            </div><!-- /header -->         
+            <div data-role="content">
+                
+                Recipient connected? Y/N
+                Goal reached? Y/N
+
+                <a href="page10" data-role="button">OVER-RIDE</a>
+            </div><!-- /content -->    
+        
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+         <div data-role="page" id="page10">         
+            <div data-role="header">    
+               <h1>
+                  GGIT Over-ride
+                </h1>     
+            </div><!-- /header -->         
+            <div data-role="content">
+                
+                Need to unlock the box for whatever reason? That’s okay :)
+
+                <a id="changePageButton" data-role="button">UNLOCK</a>
+            </div><!-- /content -->    
+        
+            
+            <div data-role="footer">         
+            </div><!-- /footer -->     
+            
+        </div><!-- /page --> 
+
+    </body>
+</html>
